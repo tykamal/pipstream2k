@@ -410,6 +410,9 @@ export const text: Record<TextVariants, string> = styleVariants({
   bold: {
     fontWeight: theme.fontWeights.bold,
   },
+  left: {
+    textAlign: "left"
+  },
 })
 
 export const link = style({

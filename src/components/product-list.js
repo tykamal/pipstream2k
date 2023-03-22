@@ -15,7 +15,7 @@ import {
 
 function Product(props) {
   return (
-    <Box center>
+    <Box left>
       {props.image && (
         <Icon
           alt={props.image.alt}
@@ -24,7 +24,14 @@ function Product(props) {
         />
       )}
       <Subhead>{props.heading}</Subhead>
-      <Text>{props.text}</Text>
+        <ul>
+        {props.text && props.text.split(",").map((feature, index) => (
+        <li key={index}>
+            <Text>{feature}</Text>
+        </li>
+        ))
+      }
+      </ul>
       <LinkList links={props.links} />
     </Box>
   )
